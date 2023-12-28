@@ -34,25 +34,25 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               />
             </div>
-            <ul className="">
+            <ul className="uppercase">
               <li className="my-4 hover:font-bold">
-                <Link href={"/"}>Home</Link>
+                <Link href={"/"} onClick={() => setIsMenuOpen(false)}>Home</Link>
               </li>
               <li className="my-4 hover:font-bold">
-                <Link href={"#about"}>About</Link>
+                <Link href={"#about"} onClick={() => setIsMenuOpen(false)}>About</Link>
               </li>
               <li className="my-4 hover:font-bold">
-                <Link href={"#skills"}>Skills</Link>
+                <Link href={"#skills"} onClick={() => setIsMenuOpen(false)}>Skills</Link>
               </li>
               <li className="my-4 hover:font-bold">
-                <Link href={"#projects"}>Projects</Link>
+                <Link href={"#projects"} onClick={() => setIsMenuOpen(false)}>Projects</Link>
               </li>
               <li className="my-4 hover:font-bold">
-                <Link href={"#contact"}>Contact</Link>
+                <Link href={"#contact"} onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </li>
             </ul>
             <div className="mb-4">
-              <p className="mb-6 text-purple-800">Let's Connect</p>
+              <p className="mb-6 text-purple-800 uppercase">Let's Connect</p>
               <ul className="flex items-center">
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
                   <Link href={"#"}>
@@ -75,7 +75,7 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:block">
-            <ul className="flex justify-between items-center ml-4">
+            <ul className="flex justify-between items-center ml-4 uppercase">
               <li className="m-4 hover:border-b-2 border-[#1f2937]">
                 <Link href={"/"}>Home</Link>
               </li>
