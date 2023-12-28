@@ -1,9 +1,11 @@
-import Main from '@/components/Main'
+import Main from "@/components/Main";
+import About from "@/components/About";
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Main />
+      <About />
     </>
-  )
+  );
 }
