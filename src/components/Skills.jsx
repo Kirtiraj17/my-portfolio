@@ -10,7 +10,6 @@ import {
   GithubIcon,
   BitbucketIcon,
 } from "@/assets/icons";
-import React from "react";
 
 const skills = [
   {
@@ -57,7 +56,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full md:h-screen p-2 py-16">
+    <div id="skills" className="w-full p-2 py-16">
       <div className="w-full mx-auto max-w-7xl">
         <h2 className="text-blue-600 mb-4">Skills</h2>
         <span className="text-2xl font-bold mb-4">What I Can Do</span>

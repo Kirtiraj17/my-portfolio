@@ -6,6 +6,29 @@ import { IoClose } from "react-icons/io5";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+const navigation = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    title: "Projects",
+    link: "#projects",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
+  },
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,27 +58,24 @@ const Navbar = () => {
               />
             </div>
             <ul className="uppercase">
-              <li className="my-4 py-2 hover:font-bold">
-                <Link href={"/"} onClick={() => setIsMenuOpen(false)}>Home</Link>
-              </li>
-              <li className="my-4 py-2 hover:font-bold">
-                <Link href={"#about"} onClick={() => setIsMenuOpen(false)}>About</Link>
-              </li>
-              <li className="my-4 py-2 hover:font-bold">
-                <Link href={"#skills"} onClick={() => setIsMenuOpen(false)}>Skills</Link>
-              </li>
-              <li className="my-4 py-2 hover:font-bold">
-                <Link href={"#projects"} onClick={() => setIsMenuOpen(false)}>Projects</Link>
-              </li>
-              <li className="my-4 py-2 hover:font-bold">
-                <Link href={"#contact"} onClick={() => setIsMenuOpen(false)}>Contact</Link>
-              </li>
+              {navigation.map((nav) => (
+                <li key={nav.title} className="my-4 py-2 hover:font-bold">
+                  <Link href={nav.link} onClick={() => setIsMenuOpen(false)}>
+                    {nav.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <div className="mb-4">
               <p className="mb-6 text-purple-800 uppercase">Let's Connect</p>
               <ul className="flex items-center">
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
-                  <Link href={"https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"} target="_blank">
+                  <Link
+                    href={
+                      "https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"
+                    }
+                    target="_blank"
+                  >
                     <FaLinkedinIn />
                   </Link>
                 </li>
@@ -76,21 +96,14 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <div className="hidden md:block">
             <ul className="flex justify-between items-center ml-4 uppercase">
-              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
-                <Link href={"/"}>Home</Link>
-              </li>
-              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
-                <Link href={"#about"}>About</Link>
-              </li>
-              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
-                <Link href={"#skills"}>Skills</Link>
-              </li>
-              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
-                <Link href={"#projects"}>Projects</Link>
-              </li>
-              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
-                <Link href={"#contact"}>Contact</Link>
-              </li>
+              {navigation.map((nav) => (
+                <li
+                  key={nav.title}
+                  className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]"
+                >
+                  <Link href={nav.link}>{nav.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
