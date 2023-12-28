@@ -24,17 +24,17 @@ const Main = () => {
             <div className="mb-4">
               <ul className="flex justify-between items-center">
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110">
-                  <Link href={"#"}>
+                  <Link href={"https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"} target="_blank">
                     <FaLinkedinIn />
                   </Link>
                 </li>
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110">
-                  <Link href={"#"}>
+                  <Link href={"https://github.com/Kirtiraj17"} target="_blank">
                     <FaGithub />
                   </Link>
                 </li>
                 <li className="p-3 rounded-full shadow-xl bg-white hover:scale-110">
-                  <Link href={"#"}>
+                  <Link href={"mailto:kirtirajg1997@gmail.com"} target="_blank">
                     <MdEmail />
                   </Link>
                 </li>

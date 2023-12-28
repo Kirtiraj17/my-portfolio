@@ -4,8 +4,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-full md:h-screen p-2 py-16 flex items-center">
-      <div>
+    <div id="about" className="w-full md:h-screen p-2 py-16 flex items-center">
+      <div className="w-full mx-auto max-w-7xl">
         <h2 className="text-blue-600 mb-4">About</h2>
         <span className="text-2xl font-bold mb-4">Who I Am</span>
         <div className="m-auto max-w-7xl md:flex md:justify-between my-4">

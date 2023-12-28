@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-50 top-0">
+    <div className="fixed w-full h-20 shadow-xl z-50 top-0 bg-[#ecf0f3]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <h1 className="text-3xl">Navbar</h1>
         <div className="">
@@ -55,17 +55,17 @@ const Navbar = () => {
               <p className="mb-6 text-purple-800 uppercase">Let's Connect</p>
               <ul className="flex items-center">
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
-                  <Link href={"#"}>
+                  <Link href={"https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"} target="_blank">
                     <FaLinkedinIn />
                   </Link>
                 </li>
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
-                  <Link href={"#"}>
+                  <Link href={"https://github.com/Kirtiraj17"} target="_blank">
                     <FaGithub />
                   </Link>
                 </li>
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
-                  <Link href={"#"}>
+                  <Link href={"mailto:kirtirajg1997@gmail.com"} target="_blank">
                     <MdEmail />
                   </Link>
                 </li>
@@ -76,19 +76,19 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <div className="hidden md:block">
             <ul className="flex justify-between items-center ml-4 uppercase">
-              <li className="m-4 hover:border-b-2 border-[#1f2937]">
+              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
                 <Link href={"/"}>Home</Link>
               </li>
-              <li className="m-4 hover:border-b-2 border-[#1f2937]">
+              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
                 <Link href={"#about"}>About</Link>
               </li>
-              <li className="m-4 hover:border-b-2 border-[#1f2937]">
+              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
                 <Link href={"#skills"}>Skills</Link>
               </li>
-              <li className="m-4 hover:border-b-2 border-[#1f2937]">
+              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
                 <Link href={"#projects"}>Projects</Link>
               </li>
-              <li className="m-4 hover:border-b-2 border-[#1f2937]">
+              <li className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]">
                 <Link href={"#contact"}>Contact</Link>
               </li>
             </ul>

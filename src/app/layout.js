@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <div className="mt-20">
+        <div className="w-full absolute top-20">
           {children}
         </div>
       </body>
