@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -13,29 +13,46 @@ const navigation = [
   },
   {
     title: "About",
-    link: "#about",
+    link: "/#about",
   },
   {
     title: "Skills",
-    link: "#skills",
+    link: "/#skills",
   },
   {
     title: "Projects",
-    link: "#projects",
+    link: "/#projects",
   },
   {
     title: "Contact",
-    link: "#contact",
+    link: "/#contact",
   },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [shadow, setShadow] = useState(true);
+
+  useEffect(() => {
+    const handleShadow = () => {
+      window.scrollY >= 90 ? setShadow(true) : setShadow(false);
+    };
+
+    window.addEventListener("scroll", handleShadow);
+
+    return () => window.removeEventListener("scroll", handleShadow);
+  }, []);
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-50 top-0 bg-[#ecf0f3]">
+    <div
+      className={`fixed w-full h-20 z-50 top-0 bg-[#ecf0f3] ${
+        shadow ? "shadow-xl" : ""
+      }`}
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <h1 className="text-3xl">Navbar</h1>
+        <Link href={"/"}>
+          <h1 className="text-3xl">Porfolio</h1>
+        </Link>
         <div className="">
           {/* Mobile Nav */}
           <FiMenu
@@ -51,7 +68,7 @@ const Navbar = () => {
             }`}
           >
             <div className="flex justify-between items-center">
-              <h1 className="text-3xl">Navbar</h1>
+              <h1 className="text-3xl">Portfolio</h1>
               <IoClose
                 className="w-8 h-8"
                 onClick={() => setIsMenuOpen(false)}

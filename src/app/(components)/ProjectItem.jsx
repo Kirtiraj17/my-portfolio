@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const ProjectItem = ({ title, description, imgUrl, link }) => {
@@ -13,12 +14,15 @@ const ProjectItem = ({ title, description, imgUrl, link }) => {
           More Info
         </Link>
       </div>
-      <div className="relative w-full h-auto shadow-xl text-center shadow-gray-400 flex justify-between items-center rounded-xl p-4 group md:hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
-        <img
-          src={imgUrl}
-          alt=""
-          className="rounded-xl max-h-96 bg-cover md:group-hover:opacity-10"
-        />
+      <div className="relative w-full h-72 shadow-xl text-center shadow-gray-400 flex justify-between items-center rounded-xl p-4 group md:hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+        <figure className="relative rounded-xl overflow-hidden w-full h-full">
+          <Image
+            src={imgUrl}
+            alt={title}
+            layout="fill"
+            className="rounded-xl max-h-96 md:group-hover:opacity-10 hover:scale-105 ease-in duration-300 object-cover"
+          />
+        </figure>
         <div className="hidden md:group-hover:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <h3 className="text-2xl text-center text-white tracking-wider">
             {title}

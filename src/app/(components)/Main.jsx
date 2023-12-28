@@ -23,7 +23,7 @@ const Main = () => {
           <div className="flex justify-center items-center py-4 mx-auto max-w-80">
             <div className="mb-4">
               <ul className="flex justify-between items-center">
-                <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110 ease-in duration-300">
+                <li className="p-3 mr-4 rounded-full shadow-xl cursor-pointer bg-white hover:scale-110 ease-in duration-300">
                   <Link
                     href={
                       "https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"
@@ -33,12 +33,12 @@ const Main = () => {
                     <FaLinkedinIn />
                   </Link>
                 </li>
-                <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110 ease-in duration-300">
+                <li className="p-3 mr-4 rounded-full shadow-xl cursor-pointer bg-white hover:scale-110 ease-in duration-300">
                   <Link href={"https://github.com/Kirtiraj17"} target="_blank">
                     <FaGithub />
                   </Link>
                 </li>
-                <li className="p-3 rounded-full shadow-xl bg-white hover:scale-110 ease-in duration-300">
+                <li className="p-3 rounded-full shadow-xl cursor-pointer bg-white hover:scale-110 ease-in duration-300">
                   <Link href={"mailto:kirtirajg1997@gmail.com"} target="_blank">
                     <MdEmail />
                   </Link>

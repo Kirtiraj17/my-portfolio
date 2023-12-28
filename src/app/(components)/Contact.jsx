@@ -12,11 +12,11 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="col-span-3 lg:col-span-2 w-full h-full rounded-xl shadow-xl shadow-gray-400 p-4">
             <div className="lg:p-4 h-full">
-              <div className="rounded-xl">
+              <div className="rounded-xl overflow-hidden">
                 <img
                   src={"https://source.unsplash.com/random"}
                   alt=""
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
+                  className="rounded-xl max-h-[400px] hover:scale-105 ease-in duration-300"
                 />
               </div>
               <div className="mt-4">

@@ -8,28 +8,28 @@ const Projects = () => {
         <span className="text-2xl font-bold mb-4">What I have Built</span>
         <div className="md:grid md:grid-cols-2 gap-8 mt-8">
           <ProjectItem
-            title={"Project 1"}
-            description={"React Js"}
-            imgUrl={"https://source.unsplash.com/random"}
-            link={"/project1"}
+            title={"Toll Calculator"}
+            description="React Js"
+            imgUrl={"/assets/TollCalculator.png"}
+            link={"/toll-calculator"}
           />
           <ProjectItem
-            title={"Project 1"}
+            title={"Project 2"}
             description={"React Js"}
-            imgUrl={"https://source.unsplash.com/random"}
+            imgUrl={"/assets/TollCalculator.png"}
             link={"/project2"}
           />
           <ProjectItem
-            title={"Project 1"}
+            title={"Project 3"}
             description={"React Js"}
-            imgUrl={"https://source.unsplash.com/random"}
-            link={"/project2"}
+            imgUrl={"/assets/TollCalculator.png"}
+            link={"/project3"}
           />
           <ProjectItem
-            title={"Project 1"}
+            title={"Project 4"}
             description={"React Js"}
-            imgUrl={"https://source.unsplash.com/random"}
-            link={"/project2"}
+            imgUrl={"/assets/TollCalculator.png"}
+            link={"/project4"}
           />
         </div>
       </div>
