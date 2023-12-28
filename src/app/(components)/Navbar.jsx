@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
             <ul className="uppercase">
               {navigation.map((nav) => (
-                <li key={nav.title} className="my-4 py-2 hover:font-bold">
+                <li key={nav.title} className="my-4 py-2 hover:font-bold hover:text-blue-600">
                   <Link href={nav.link} onClick={() => setIsMenuOpen(false)}>
                     {nav.title}
                   </Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
               {navigation.map((nav) => (
                 <li
                   key={nav.title}
-                  className="m-4 hover:border-b-2 hover:font-bold border-[#1f2937]"
+                  className="m-4 hover:border-b-2 hover:border-blue-600 hover:font-bold hover:text-blue-600 border-[#1f2937]"
                 >
                   <Link href={nav.link}>{nav.title}</Link>
                 </li>

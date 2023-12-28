@@ -9,7 +9,7 @@ import {
   WordPressIcon,
   GithubIcon,
   BitbucketIcon,
-} from "@/assets/icons";
+} from "@/lib/icons";
 
 const skills = [
   {

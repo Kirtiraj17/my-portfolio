@@ -1,9 +1,47 @@
+"use client";
 import Link from "next/link";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiChevronDoubleUp } from "react-icons/hi";
+import { useState } from "react";
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const FORM_ACCESS_KEY = process.env.FORM_ACCESS_KEY;
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", FORM_ACCESS_KEY);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      // console.log("Success", res);
+      setResult(res.message);
+
+      // Reset the form
+      event.target.reset();
+    } else {
+      console.log("Error", res);
+      setResult(res.message);
+    }
+  };
+
+  const handleSuccessMessage = () => {
+    setTimeout(() => {
+      setResult("");
+    }, 7000);
+
+    return result ? <p>{result}</p> : null;
+  };
+
   return (
     <div id="contact" className="w-full p-2 py-16">
       <div className="w-full mx-auto max-w-7xl">
@@ -27,7 +65,7 @@ const Contact = () => {
               <div>
                 <p className="uppercase pt-8">Connect with me</p>
                 <ul className="flex items-center py-4">
-                  <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110">
+                  <li className="p-3 mr-4 rounded-full shadow-xl bg-white cursor-pointer hover:scale-110 ease-in duration-300">
                     <Link
                       href={
                         "https://www.linkedin.com/in/kirtiraj-gawale-04978114a/"
@@ -37,7 +75,7 @@ const Contact = () => {
                       <FaLinkedinIn />
                     </Link>
                   </li>
-                  <li className="p-3 mr-4 rounded-full shadow-xl bg-white hover:scale-110">
+                  <li className="p-3 mr-4 rounded-full shadow-xl bg-white cursor-pointer hover:scale-110 ease-in duration-300">
                     <Link
                       href={"https://github.com/Kirtiraj17"}
                       target="_blank"
@@ -45,7 +83,7 @@ const Contact = () => {
                       <FaGithub />
                     </Link>
                   </li>
-                  <li className="p-3 rounded-full shadow-xl bg-white hover:scale-110">
+                  <li className="p-3 rounded-full shadow-xl bg-white cursor-pointer hover:scale-110 ease-in duration-300">
                     <Link
                       href={"mailto:kirtirajg1997@gmail.com"}
                       target="_blank"
@@ -58,7 +96,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-span-3 w-full h-full rounded-xl shadow-xl shadow-gray-400 p-4">
-            <form className="p-4">
+            <form className="p-4" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                 <div className="flex flex-col">
                   <label htmlFor="name" className="uppercase text-sm py-2">
@@ -66,6 +104,7 @@ const Contact = () => {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
@@ -76,6 +115,7 @@ const Contact = () => {
                   </label>
                   <input
                     id="number"
+                    name="number"
                     type="text"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                   />
@@ -87,6 +127,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                 />
@@ -97,6 +138,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="subject"
+                  name="subject"
                   type="text"
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                 />
@@ -106,16 +148,20 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  name="message"
                   id="message"
+                  name="message"
                   cols="10"
                   rows="5"
                   className="border-2 rounded-lg p-3 flex border-gray-300"
                 ></textarea>
-                <button className="w-full p-4 mt-4 text-gray-100 opacity-90 hover:opacity-100">
+                <button
+                  type="submit"
+                  className="w-full p-4 mt-4 text-gray-100 opacity-90 hover:opacity-100"
+                >
                   Send Message
                 </button>
               </div>
+              {result && <div className="mt-8">{handleSuccessMessage()}</div>}
             </form>
           </div>
         </div>

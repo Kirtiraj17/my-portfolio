@@ -19,12 +19,12 @@ const Projects = () => {
             imgUrl={"/assets/ReactMovieApp.png"}
             link={"/react-movie-app"}
           />
-          <ProjectItem
+          {/* <ProjectItem
             title={"Project 3"}
             description={"React Js"}
             imgUrl={"/assets/TollCalculator.png"}
             link={"/project3"}
-          />
+          /> */}
         </div>
       </div>
     </div>
