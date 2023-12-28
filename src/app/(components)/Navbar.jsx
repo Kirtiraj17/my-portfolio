@@ -84,7 +84,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="mb-4">
-              <p className="mb-6 text-purple-800 uppercase">Let's Connect</p>
+              <p className="mb-6 text-purple-800 uppercase">Let&apos;s Connect</p>
               <ul className="flex items-center">
                 <li className="p-3 mr-4 rounded-full shadow-xl bg-white">
                   <Link

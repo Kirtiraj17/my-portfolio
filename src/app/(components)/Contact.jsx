@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiChevronDoubleUp } from "react-icons/hi";
 import { useState } from "react";
+import Image from "next/image";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -50,17 +51,18 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           <div className="col-span-3 lg:col-span-2 w-full h-full rounded-xl shadow-xl shadow-gray-400 p-4">
             <div className="lg:p-4 h-full">
-              <div className="rounded-xl overflow-hidden">
-                <img
+              <div className="relative w-full h-72 rounded-xl overflow-hidden">
+                <Image
                   src={"https://source.unsplash.com/random"}
-                  alt=""
+                  alt="contactImg"
+                  layout="fill"
                   className="rounded-xl max-h-[400px] hover:scale-105 ease-in duration-300"
                 />
               </div>
               <div className="mt-4">
                 <h2 className="py-2">Kirtiraj Gawale</h2>
                 <p>Front-End Developer</p>
-                <p className="py-4">Contact me and let's talk.</p>
+                <p className="py-4">Contact me and let&apos;s talk.</p>
               </div>
               <div>
                 <p className="uppercase pt-8">Connect with me</p>

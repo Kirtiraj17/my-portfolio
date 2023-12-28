@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
@@ -24,10 +25,12 @@ const About = () => {
               Checkout some of my latest projects
             </Link>
           </div>
-          <figure className="p-2 rounded-xl shadow-xl md:basis-1/3">
-            <img
+          <figure className="relative w-full h-72 overflow-hidden p-2 rounded-xl shadow-xl md:basis-1/3">
+            <Image
               src={"https://source.unsplash.com/random"}
-              className="rounded-xl max-h-96 bg-cover"
+              alt="aboutImg"
+              className="rounded-xl max-h-96 object-cover overflow-hidden p-2"
+              layout="fill"
             />
           </figure>
         </div>
