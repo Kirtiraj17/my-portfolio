@@ -14,22 +14,16 @@ const Projects = () => {
             link={"/toll-calculator"}
           />
           <ProjectItem
-            title={"Project 2"}
+            title={"React Movie App"}
             description={"React Js"}
-            imgUrl={"/assets/TollCalculator.png"}
-            link={"/project2"}
+            imgUrl={"/assets/ReactMovieApp.png"}
+            link={"/react-movie-app"}
           />
           <ProjectItem
             title={"Project 3"}
             description={"React Js"}
             imgUrl={"/assets/TollCalculator.png"}
             link={"/project3"}
-          />
-          <ProjectItem
-            title={"Project 4"}
-            description={"React Js"}
-            imgUrl={"/assets/TollCalculator.png"}
-            link={"/project4"}
           />
         </div>
       </div>
