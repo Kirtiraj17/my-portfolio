@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-50">
+    <div className="fixed w-full h-20 shadow-xl z-50 top-0">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <h1 className="text-3xl">Navbar</h1>
         <div className="">
@@ -35,19 +35,19 @@ const Navbar = () => {
               />
             </div>
             <ul className="uppercase">
-              <li className="my-4 hover:font-bold">
+              <li className="my-4 py-2 hover:font-bold">
                 <Link href={"/"} onClick={() => setIsMenuOpen(false)}>Home</Link>
               </li>
-              <li className="my-4 hover:font-bold">
+              <li className="my-4 py-2 hover:font-bold">
                 <Link href={"#about"} onClick={() => setIsMenuOpen(false)}>About</Link>
               </li>
-              <li className="my-4 hover:font-bold">
+              <li className="my-4 py-2 hover:font-bold">
                 <Link href={"#skills"} onClick={() => setIsMenuOpen(false)}>Skills</Link>
               </li>
-              <li className="my-4 hover:font-bold">
+              <li className="my-4 py-2 hover:font-bold">
                 <Link href={"#projects"} onClick={() => setIsMenuOpen(false)}>Projects</Link>
               </li>
-              <li className="my-4 hover:font-bold">
+              <li className="my-4 py-2 hover:font-bold">
                 <Link href={"#contact"} onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </li>
             </ul>
