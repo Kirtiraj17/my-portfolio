@@ -9,13 +9,13 @@ const Projects = () => {
         <div className="md:grid md:grid-cols-2 gap-8 mt-8">
           <ProjectItem
             title={"Toll Calculator"}
-            description="React Js"
+            description="React Js / TollGuru API"
             imgUrl={"/assets/TollCalculator.png"}
             link={"/toll-calculator"}
           />
           <ProjectItem
             title={"React Movie App"}
-            description={"React Js"}
+            description={"React Js / Styled Components"}
             imgUrl={"/assets/ReactMovieApp.png"}
             link={"/react-movie-app"}
           />

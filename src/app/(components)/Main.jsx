@@ -12,13 +12,16 @@ const Main = () => {
           </p>
           <h1 className="py-4 text-gray-700">
             <span className="block mb-3">
-              Hi, I&apos;m <span className="text-blue-600">Kirtiraj Gawale</span>
+              Hi, I&apos;m{" "}
+              <span className="text-blue-600">Kirtiraj Gawale</span>
             </span>
             <span>A Frontend Developer</span>
           </h1>
           <p className="py-4 text-gray-700 mx-auto max-w-[70%]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam sit
-            esse est id maxime odio doloribus a ipsum debitis explicabo.
+            Passionate about crafting seamless and engaging user interfaces, I
+            specialize in frontend technologies like JavaScript and React. My
+            goal is to transform ideas into intuitive and visually appealing web
+            experiences.
           </p>
           <div className="flex justify-center items-center py-4 mx-auto max-w-80">
             <div className="mb-4">

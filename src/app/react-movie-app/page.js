@@ -23,9 +23,30 @@ const ReactMovieApp = () => {
         <div className="col-span-4">
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam sit
-            esse est id maxime odio doloribus a ipsum debitis explicabo.
+          <p className="my-4">
+            As a personal side project, I developed the React Movie App, a
+            movie-searching application designed to fetch comprehensive
+            movie-related information. The app utilises TheMovieDB API to
+            provide details such as cast, budget, and more for a wide range of
+            movies.
+          </p>
+          <p className="mb-4">
+            Users can effortlessly search for any movie and access detailed
+            information, including casting, budget, and other relevant details.
+            The tech stack used was ReactJS and Styled Components.
+          </p>
+          <p className="mb-4">
+            The primary goal of creating this project was to deepen my
+            understanding of React and its implementation. By working on a
+            real-world application that interacts with an external API, I gained
+            valuable insights into React's capabilities and learned how to
+            structure and develop a functional and responsive user interface.
+          </p>
+          <p className="mb-4">
+            The React Movie App stands as a testament to my hands-on experience
+            with React and showcases my ability to create a functional and
+            aesthetically pleasing application using modern frontend
+            technologies.
           </p>
           <button className="text-white opacity-90 hover:opacity-100 py-2 px-8 mt-4 mr-4">
             <Link
@@ -47,7 +68,7 @@ const ReactMovieApp = () => {
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 p-4 rounded-xl">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
-            <div className="grid grid-cols-3 md:grid-cols-1">
+            <div className="grid grid-cols-3 md:grid-cols-1 gap-4">
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="mr-1" />
                 React Js
